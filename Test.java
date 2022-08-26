@@ -1,0 +1,74 @@
+public class Test
+{
+    public static void main(String[] args)
+    {
+        MyList<Integer> list1 = new MyList<>();
+        System.out.println("-------------------------------");
+        System.out.println("Array size : " + list1.size());
+        System.out.println("Array capacity : " + list1.getCapacity());
+        System.out.println("-------------------------------");
+        list1.add(10);
+        list1.add(20);
+        list1.add(30);
+        list1.add(40);
+        System.out.println("-------------------------------");
+        System.out.println("Array size : " + list1.size());
+        System.out.println("Array capacity : " + list1.getCapacity());
+        System.out.println("-------------------------------");
+        list1.add(50);
+        list1.add(60);
+        list1.add(70);
+        list1.add(80);
+        list1.add(90);
+        list1.add(100);
+        list1.add(110);
+        System.out.println("-------------------------------");
+        System.out.println("Array size : " + list1.size());
+        System.out.println("Array capacity : " + list1.getCapacity());
+        System.out.println("-------------------------------");
+        MyList<Integer> list2 = new MyList<>();
+        list2.add(10);
+        list2.add(20);
+        list2.add(30);
+        System.out.println("-------------------------------");
+        System.out.println("Value at index 2: " + list2.get(2));
+        System.out.println("-------------------------------");
+        list2.remove(2);
+        list2.add(40);
+        list2.set(0, 100);
+        System.out.println("-------------------------------");
+        System.out.println("Value at index 2: " + list2.get(2));
+        System.out.println("-------------------------------");
+        System.out.println(list2.toString());
+        MyList<Integer> liste = new MyList<>();
+        System.out.println("List Status: " + (liste.isEmpty() ? "Empty" : "Full"));
+        liste.add(10);
+        liste.add(20);
+        liste.add(30);
+        liste.add(40);
+        liste.add(20);
+        liste.add(50);
+        liste.add(60);
+        liste.add(70);
+        System.out.println("-------------------------------");
+        System.out.println("List Status: " + (liste.isEmpty() ? "Empty" : "Full"));
+        System.out.println("-------------------------------");
+        System.out.println("Index : " + liste.indexOf(20));
+        System.out.println("-------------------------------");
+        System.out.println("Index :" + liste.indexOf(100));
+        System.out.println("-------------------------------");
+        System.out.println("Index : " + liste.lastIndexOf(20));
+        System.out.println("-------------------------------");
+        Object[] dizi = liste.toArray();
+        System.out.println("First element of array :" + dizi[0]);
+        System.out.println("-------------------------------");
+        MyList<Integer> altListem = liste.subList(0, 3);
+        System.out.println(altListem.toString());
+        System.out.println("Value 20 in my list: " + liste.contains(20));
+        System.out.println("-------------------------------");
+        System.out.println("Value 120 in my list: " + liste.contains(120));
+        System.out.println("-------------------------------");
+        liste.clear();
+        System.out.println(liste.toString());
+    }
+}
